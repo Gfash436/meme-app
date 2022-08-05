@@ -12,7 +12,7 @@ Project Description : A freelancer product designer just finished their design
 working on Meme mobile app and this is the figma link below;
 https://www.figma.com/file/UFGBkA9rHWWlCLQNslQWRc/Meme-App
 
-Project Instructions :
+## Project Instructions
 i) Your major work is to implement the splash screen, login page, sign up page, verify 
 page and successfully verify page.
 ii) The design team is very strict with their designs and they wouldn’t like you to do
@@ -20,8 +20,8 @@ something different from what has been designed.
 iii)  It is very important you link all pages up and you don’t have to be extremely 
 technical doing that, just allow clicking of the button to lead to a new page.
 
-How I Developed the App:
-. I used Visual Studio Code (VS Code) as the Integrated Development Environment (IDE).
+## How I Developed the App
+I used Visual Studio Code (VS Code) as the Integrated Development Environment (IDE).\n
 . I used Flutter to create the Application. Flutter is an open source framework by Google
   for building beautiful, natively compiled, multi-platform applications from a single
   codebase.
