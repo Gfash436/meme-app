@@ -38,7 +38,7 @@ dart files in it.
 I used the stateful and stateless widgets on the files where necessary.
 I also used a number of widgets to create my application because in Flutter, widgets
 contains arguments that enable develops to implement some certain functions on the app
-Basically, everything in flutter in about widget over widgets.
+Basically, everything in flutter is about widget over widgets.
   
 ## Apk Link 
 The link below is the finished project link which allows anyone to install
