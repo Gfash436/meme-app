@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meme/logIn.dart';
-import 'package:meme/verify.dart';
+import 'package:meme/src/helpers/validation_helper.dart';
+import 'package:meme/src/widgets/login.dart';
+import 'package:meme/src/widgets/verify.dart';
 
 class Verified extends StatefulWidget {
   const Verified({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _VerifiedState extends State<Verified> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffE5E5E5),
+        backgroundColor: const Color(0xffE5E5E5),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -24,21 +25,26 @@ class _VerifiedState extends State<Verified> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.pop(context,
-                            MaterialPageRoute(builder: (context) => Verify()));
+                        Navigator.pop(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Verify()));
                       },
                       child: const Icon(
                         Icons.arrow_back_rounded,
                         color: Color(0xff000000),
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     GestureDetector(
                       onTap: (() {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => LogIn()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    LogIn(ValidationHelper())));
                       }),
-                      child: Text(
+                      child: const Text(
                         'Next',
                         style: TextStyle(
                             fontFamily: 'JosefinSans',
@@ -50,13 +56,13 @@ class _VerifiedState extends State<Verified> {
                   ],
                 ),
               ),
-              SizedBox(height: 103.99),
+              const SizedBox(height: 103.99),
               SizedBox(
                   height: 252,
                   width: 263.08,
                   child: Image.asset('assets/images/Verified.png')),
-              SizedBox(height: 78),
-              Text(
+              const SizedBox(height: 78),
+              const Text(
                 textAlign: TextAlign.center,
                 'Account Successfully\nVerified',
                 style: TextStyle(
@@ -66,8 +72,6 @@ class _VerifiedState extends State<Verified> {
                   color: Color(0xff000000),
                 ),
               ),
-              SizedBox(height: 150),
-              Center(child: Image.asset('assets/images/Home Indicator.png')),
             ],
           ),
         ),

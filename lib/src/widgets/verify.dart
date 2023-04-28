@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:meme/signUp.dart';
-import 'package:meme/verified.dart';
+import 'package:meme/src/helpers/validation_helper.dart';
+import 'package:meme/src/widgets/sign_up.dart';
+import 'package:meme/src/widgets/verified.dart';
 
 class Verify extends StatefulWidget {
   const Verify({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _VerifyState extends State<Verify> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffE5E5E5),
+        backgroundColor: const Color(0xffE5E5E5),
         body: Padding(
           padding: const EdgeInsets.only(left: 20, right: 27),
           child: SingleChildScrollView(
@@ -30,7 +31,8 @@ class _VerifyState extends State<Verify> {
                         Navigator.pop(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const SignUpScreen()));
+                                builder: (context) =>
+                                    SignUpScreen(ValidationHelper())));
                       },
                       child: const Icon(Icons.arrow_back_rounded,
                           color: Color(0xff000000))),
@@ -74,7 +76,7 @@ class _VerifyState extends State<Verify> {
                               FocusScope.of(context).nextFocus();
                             }
                           },
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                           keyboardType: TextInputType.number,
                           textAlign: TextAlign.center,
                           inputFormatters: [
@@ -99,7 +101,7 @@ class _VerifyState extends State<Verify> {
                               FocusScope.of(context).nextFocus();
                             }
                           },
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                           keyboardType: TextInputType.number,
                           textAlign: TextAlign.center,
                           inputFormatters: [
@@ -124,7 +126,7 @@ class _VerifyState extends State<Verify> {
                               FocusScope.of(context).nextFocus();
                             }
                           },
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                           keyboardType: TextInputType.number,
                           textAlign: TextAlign.center,
                           inputFormatters: [
@@ -149,7 +151,7 @@ class _VerifyState extends State<Verify> {
                               FocusScope.of(context).nextFocus();
                             }
                           },
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                           keyboardType: TextInputType.number,
                           textAlign: TextAlign.center,
                           inputFormatters: [
@@ -174,7 +176,7 @@ class _VerifyState extends State<Verify> {
                               FocusScope.of(context).nextFocus();
                             }
                           },
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                           keyboardType: TextInputType.number,
                           textAlign: TextAlign.center,
                           inputFormatters: [
@@ -192,7 +194,7 @@ class _VerifyState extends State<Verify> {
                   width: 315,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: const Color(0xff857C94),
+                      backgroundColor: const Color(0xff857C94),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -214,8 +216,6 @@ class _VerifyState extends State<Verify> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 258),
-                Center(child: Image.asset('assets/images/Home Indicator.png')),
               ],
             ),
           ),

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.my_memeapp">
    <application
-        android:label="my_memeapp"
+        android:label="Meme"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

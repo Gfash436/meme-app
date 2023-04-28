@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meme/logIn.dart';
-import 'package:meme/signUp.dart';
+import 'package:meme/src/helpers/validation_helper.dart';
+import 'package:meme/src/widgets/login.dart';
+import 'package:meme/src/widgets/sign_up.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
         backgroundColor: const Color(0xff1F1234),
         body: Column(
           children: [
-            Container(
+            SizedBox(
               height: 450,
               width: 375,
               child: Stack(children: [
@@ -134,7 +135,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SignUpScreen()));
+                          builder: (context) =>
+                              SignUpScreen(ValidationHelper())));
                 },
                 child: Container(
                   height: 58,
@@ -196,8 +198,10 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                     ),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => LogIn()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LogIn(ValidationHelper())));
                     },
                   ),
                 ],
