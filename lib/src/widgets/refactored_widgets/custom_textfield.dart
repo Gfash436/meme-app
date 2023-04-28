@@ -33,7 +33,7 @@ class CustomTextFormField extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 2, right: 19),
+          padding: const EdgeInsets.only(top: 2),
           child: SizedBox(
             height: hight,
             width: width,
